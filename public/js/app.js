@@ -29,8 +29,8 @@
 
 var form = document.querySelector('#log');
 
-form.addEventListener('submit', async function() {
-    event.preventDefault();
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
     var v = new FormData(this);
     var data = {};
@@ -73,8 +73,8 @@ form.addEventListener('submit', async function() {
 
 var form2 = document.querySelector('#out');
 
-form2.addEventListener('submit', async function() {
-    event.preventDefault();
+form2.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
     var token = localStorage.getItem("jwt");
 
